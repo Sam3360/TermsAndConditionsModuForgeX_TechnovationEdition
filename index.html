@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ModuForgeX - Terms & Conditions</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#ececec;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.container{
+    width:900px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    overflow:hidden;
+}
+
+header{
+    background:#1565C0;
+    color:white;
+    padding:25px;
+}
+
+header h1{
+    margin-bottom:8px;
+}
+
+.terms{
+    height:500px;
+    overflow-y:auto;
+    padding:30px;
+    line-height:1.7;
+}
+
+h2{
+    margin-top:30px;
+    margin-bottom:10px;
+}
+
+.footer{
+    border-top:1px solid #ddd;
+    padding:25px;
+}
+
+label{
+    font-size:16px;
+}
+
+button{
+    margin-top:20px;
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    background:#2d7ef7;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:disabled{
+    background:#999;
+    cursor:not-allowed;
+}
+
+p{
+    margin-bottom:15px;
+    text-align:justify;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<h1>Road Inspector</h1>
+<p>Terms & Conditions and Privacy Notice</p>
+    <p>Last Updated: July 2026</p>
+</header>
+
+<div class="terms" id="terms">
+
+<h2>1. Introduction</h2>
+
+<p>Road Inspector is a prototype developed under the ModuForgeX initiative for the NIRMAAN Science Exhibition. It demonstrates how artificial intelligence and computer vision may assist citizens and municipal authorities in identifying road defects and improving maintenance workflows.</p>
+
+<p>By continuing to use this application you acknowledge that you have read and understood these terms.</p>
+
+<h2>2. Camera Access</h2>
+
+<p>The application requests permission to use your device camera. Images or screenshots may be captured automatically when a potential defect is detected. These images are intended to provide supporting evidence for a submitted report.</p>
+
+<p>The application may capture photographs or screenshots when road defects are detected.</p>
+
+<h2>3. Location</h2>
+
+<p>If available, the application may associate approximate GPS coordinates with reports in order to identify the location of damaged roads.</p>
+
+<h2>4. User Information</h2>
+
+<p>Your name and email address may be requested before submitting a report. This information helps identify submissions and discourages misuse of the reporting system.</p>
+
+<h2>5. Report Submission</h2>
+
+<p>Submitted reports may contain photographs, timestamps, location information and descriptive details entered by the user.</p>
+
+<h2>6. Privacy</h2>
+
+<p>Name, email address, photographs, AI detection results, timestamps, GPS coordinates and report descriptions may be collected to operate the application. Information collected during demonstrations is not intended for commercial use.</p>
+
+<h2>7. Responsible Use</h2>
+
+<p>Users agree not to submit intentionally false reports, misleading information or inappropriate content.</p>
+
+<h2>8. Disclaimer</h2>
+
+<p>This software is a prototype created for educational purposes and may not always accurately detect road defects.</p>
+
+<h2>9. Consent</h2>
+
+<p>By accepting these Terms and Conditions you consent to the collection and use of the information described above solely for the purposes of demonstrating this project.</p>
+
+<h2>10. Additional Information</h2>
+
+<h2>Notifications</h2>
+
+<p>Where applicable, reports may be forwarded to the appropriate municipal authority. The application may notify users when report status changes.</p>
+
+<h2>Civilian Login</h2>
+
+<p>Civilian accounts may submit reports, upload photographs, include descriptions, view submitted reports and track their status. Civilian users cannot verify, edit or close official cases.</p>
+
+<h2>Authority / BMC Login</h2>
+<p>Authorized officials may review reports, verify defects, update progress, assign maintenance work, change report status and review analytics. Administrative access is restricted to authorized personnel only.</p>
+
+<h2>Responsible Use</h2>
+<p>Users agree not to intentionally submit false, misleading or abusive reports. Repeated misuse may result in restricted access.</p>
+
+<h2>Permissions Requested</h2>
+
+<p>Road Inspector may request access to your camera, approximate or precise location, internet connection and notification services. These permissions are required to capture road defects, attach their location to reports and provide updates regarding submitted complaints.</p>
+
+<h2>Uploaded Content</h2>
+
+<p>Users retain ownership of photographs they submit. By uploading images through Road Inspector, users grant the application permission to process and display those images solely for the purpose of identifying, documenting and managing road defects.</p>   
+    
+    
+    
+    <h2>AI Disclaimer</h2>
+<p>Artificial intelligence predictions are not guaranteed to be correct. All reported defects should be reviewed by authorized personnel before maintenance decisions are made.</p>
+
+
+<h2>Account Security</h2>
+
+<p>Users are responsible for maintaining the confidentiality of their account credentials and for all activity performed through their account.</p>
+    
+<h2>This section forms part of the Road Inspector Terms and Conditions. Users acknowledge that reports, images, locations, timestamps and account information may be processed for demonstration purposes. Authorized authorities may review reports, while civilian users may only create and monitor their own submissions. These provisions exist to describe system operation, user responsibilities, security expectations and acceptable use. </h2>
+    
+<p>Thank you for taking the time to read these Terms and Conditions.</p>
+
+</div>
+
+<div class="footer">
+
+<label>
+<input type="checkbox" id="agree" disabled>
+I have read and agree to the Terms & Conditions.
+</label>
+
+<button id="continue" disabled>Continue</button>
+
+</div>
+
+</div>
+
+<script>
+
+const terms=document.getElementById("terms");
+const checkbox=document.getElementById("agree");
+const button=document.getElementById("continue");
+
+terms.addEventListener("scroll",()=>{
+
+if(terms.scrollTop + terms.clientHeight >= terms.scrollHeight-5){
+
+checkbox.disabled=false;
+
+}
+
+});
+
+checkbox.addEventListener("change",()=>{
+
+button.disabled=!checkbox.checked;
+
+});
+
+button.onclick=()=>{
+
+window.location.href="https://sam3360.github.io/technovation_PWA/";
+
+};
+
+</script>
+
+</body>
+</html>
